@@ -103,3 +103,25 @@ nav ul li a:hover {
 
 
 /* Estilos para el header */
+
+/* Estilos para la grilla */
+
+
+/* @media (min-width:480px) { */
+.netflix-grid {
+    background: gray;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 21.5px;
+}
+.item {
+    width: 278px;
+    height: 380px;
+    /* color: white;
+    font-size: 5rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
