@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>Generador de Ideas para Noches de Cine en Casa</h1>
+        <h1>#titulo#</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -21,9 +21,23 @@
     <main>
         <section class="contact-section">
             <h2>Contacto</h2>
-            <!-- Aquí irá el formulario de contacto -->
+            <form id="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
         </section>
-    </main>
+    </main>    
     <footer>
         <p>&copy; 2024 Generador de Ideas para Noches de Cine en Casa</p>
     </footer>

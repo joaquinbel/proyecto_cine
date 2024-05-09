@@ -5,7 +5,7 @@
 
 // Definimos las opciones disponibles para cada categoría
 const generos = {
-    accion: ["El secreto de sus ojos", "Carancho", "Nueve reinas", "Relatos salvajes", "El hijo de la novia"],
+    accion: ["El secreto de sus ojos", "Argentina 1985", "Carancho", "Nueve reinas", "Relatos salvajes", "El hijo de la novia"],
     comedia: ["Esperando la carroza", "Un novio para mi mujer", "Fuga de cerebros", "Dos más dos", "Corazón de león"],
     drama: ["El clan", "El hijo de la novia", "Medianeras", "La historia oficial", "La ciénaga"],
     terror: ["Los que aman, odian", "Los olvidados", "La memoria del agua", "Mundo al revés", "La casa muda"],
@@ -62,7 +62,7 @@ function obtenerAperitivo(genero) {
         case "comedia":
             return "Pochoclos";
         case "drama":
-            return "Vino tinto y tabla de quesos";
+            return "picada";
         case "terror":
             return "Oreos y Helado";
         case "romance":
