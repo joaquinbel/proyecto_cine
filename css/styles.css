@@ -16,12 +16,11 @@ header {
 }
 
 /* Estilos del título dentro del encabezado */
-header h1 {
+/* header h1 {
     margin: 0;
-    font-size: 36px; 
     text-transform: uppercase; 
     text-align: center;
-}
+} */
 
 /*header {
     background-color: #333;
@@ -32,7 +31,6 @@ header h1 {
 header h1 {
     margin: 0;
 }*/
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -50,6 +48,7 @@ nav ul li a {
 
 main {
     padding: 20px;
+    /* border: 1px solid red; */
 }
 
 footer {
@@ -62,6 +61,69 @@ footer {
     z-index: 1000; /* Asegura que el footer esté por encima de otros elementos */
 }
 
+/* 320px — 480px: Dispositivos móviles
+481px — 768px: iPads, Tabletas
+769px — 1024px: pantallas pequeñas, laptops
+1025px — 1200px: Computadoras de escritorio, pantallas grandes
+1201px y más —  Pantallas extra-grandes, TV */
+
+
+@media (min-width: 481px)
+{
+    header h1 {
+        margin: 0;
+        font-size: 1rem;
+        text-transform: uppercase; 
+        text-align: center;
+    }
+    main h2 {
+        font-size: 1rem;
+    }
+    #generador {
+        /* background-image: url(../img/fondo_.jpg); */
+        width: 50%;
+        /* font-size: 1rem; */
+        padding-left: 32.5%;
+        padding-right: 32.5%;
+    }
+}
+@media (min-width: 769px)
+{
+    header h1 {
+        margin: 0;
+        font-size: 1.5rem;
+        text-transform: uppercase; 
+        text-align: center;
+    }
+    main h2 {
+        font-size: 1.25rem;
+    }
+    #generador {
+        /* background-image: url(../img/fondo_.jpg); */
+        width: 50%;
+        /* font-size: 1rem; */
+        padding-left: 32.5%;
+        padding-right: 32.5%;
+    }
+}
+@media (min-width: 1025px)
+{
+    header h1 {
+        margin: 0;
+        font-size: 2rem;
+        text-transform: uppercase; 
+        text-align: center;
+    }
+    main h2 {
+        font-size: 1.75rem;
+    }
+    #generador {
+        /* background-image: url(../img/fondo_.jpg); */
+        width: 35%;
+        padding-left: 32.5%;
+        padding-right: 32.5%;
+    }
+}
 
 /*footer {
     background-color: #333;
@@ -78,6 +140,7 @@ footer {
 .about-section,
 .contact-section {
     background-color: #fff;
+    /* border: 1px solid blue; */
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -87,6 +150,7 @@ footer {
 /* Estilos para formularios */
 form {
     margin-top: 20px;
+    /* border: 1px solid orange; */
 }
 
 label {
@@ -94,8 +158,8 @@ label {
     margin-bottom: 5px;
 }
 
-input[type="text"],
-select {
+input[type="text"], select 
+ {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -103,8 +167,23 @@ select {
     border-radius: 5px;
 }
 
+#message, #name, input[type="email"]
+{
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
-
+/* input[type="email"]
+{
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+} */
 
 button {
     background-color: #333;
@@ -139,25 +218,48 @@ nav ul li a:hover {
 
 /* Estilos para la grilla */
 
+@media (min-width: 481px) {
+    .netflix-grid {
+        background: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* justify-content: space-between; */
+        gap: 21.5px;
+        padding-left: 20%;
+    }
+    .item {
+        width: 278px;
+        height: 380px;
+        /* color: white;
+        font-size: 5rem; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
-/* @media (min-width:480px) { */
-.netflix-grid {
-    background: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* justify-content: space-between; */
-    gap: 21.5px;
+@media (min-width: 769px) {
+    .netflix-grid {
+        background: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* justify-content: space-between; */
+        gap: 21.5px;
+        padding: 0; 
+     }
+    .item {
+        width: 278px;
+        height: 380px;
+        /* color: white;
+        font-size: 5rem; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
-.item {
-    width: 309px;
-    height: 402px;
-    /* color: white;
-    font-size: 5rem; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 /*.welcome-section {
     background-color: #333;
