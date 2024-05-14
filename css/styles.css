@@ -143,7 +143,7 @@ footer {
     /* border: 1px solid blue; */
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -153,9 +153,31 @@ form {
     /* border: 1px solid orange; */
 }
 
+.h2-contact {
+    color: #283629;
+    font-size: 35px;
+}
+
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
+    color: #283629;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.form-txt {
+    margin-bottom: 30px;
+    display: center;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+.form-txt a { 
+    color: #76b28e;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 input[type="text"], select 
@@ -167,13 +189,16 @@ input[type="text"], select
     border-radius: 5px;
 }
 
-#message, #name, input[type="email"]
+#message, #name, #reason, input[type="email"]
 {
     width: 50%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+    padding: 17px 25px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
     border-radius: 5px;
+    border-radius: 25px;
+    background-color: #edfff0;
+    color: #283629;
 }
 
 /* input[type="email"]
@@ -187,10 +212,11 @@ input[type="text"], select
 
 button {
     background-color: #333;
+    font-size: 16px;
     color: #fff;
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    border: 0;
+    border-radius: 25px;
     cursor: pointer;
    
 }
@@ -216,58 +242,33 @@ nav ul li a:hover {
 
 /* Estilos para el header */
 
-/* Estilos para la grilla */
 
-@media (min-width: 481px) {
-    .netflix-grid {
-        background: none;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        /* justify-content: space-between; */
-        gap: 21.5px;
-        padding-left: 20%;
-    }
+
+/* Media queries para ajustar el tamaño de la imagen en diferentes tamaños de pantalla */
+
+.netflix-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.item {
+    width: 100%;
+    height: auto;
+}
+
+/* Media queries para ajustar el tamaño de la imagen en diferentes tamaños de pantalla */
+
+/* Tablet */
+@media screen and (max-width: 768px) {
     .item {
-        width: 278px;
-        height: 380px;
-        /* color: white;
-        font-size: 5rem; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        max-width: 300px;
     }
 }
 
-@media (min-width: 769px) {
-    .netflix-grid {
-        background: none;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        /* justify-content: space-between; */
-        gap: 21.5px;
-        padding: 0; 
-     }
+/* Celular */
+@media screen and (max-width: 480px) {
     .item {
-        width: 278px;
-        height: 380px;
-        /* color: white;
-        font-size: 5rem; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        max-width: 200px;
     }
 }
-
-
-/*.welcome-section {
-    background-color: #333;
-    color: #ffffff;
-   
-}*/
-
-/* width: 278px;
-    height: 380px; */
-
-   

@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <h1>#titulo#</h1>
+        <h1>PelGen CaC</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -20,8 +20,8 @@
     </header>
     <main>
         <section class="contact-section">
-            <h2>Contacto</h2>
-            <form id="contact-form" action="#" method="POST" target="_blank">
+            <h2 class="h2-contact">Contacto</h2>
+            <form id="contact-form" action="https://formsubmit.co/consultaspeliscodo@gmail.com" method="POST" target="_blank"> <!--Mail: consultaspeliscodo@gmail.com contraseña: consultas123 -->
                 <div class="form-group">
                     <label for="name">Nombre:</label>
                     <input type="text" id="name" name="name" required >
@@ -34,10 +34,86 @@
                     <label for="message">Mensaje:</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
-                <button type="submit">Enviar</button>
+                <!-- <nuevo> -->
+                    <div class="form-group">
+                        <label for="reason">Motivo de contacto:</label>
+                        <select id="reason" name="reason" required>
+                             <option value="">Selecciona un motivo</option>
+                             <option value="consulta">Consulta</option>
+                              <option value="comentario">Comentario</option>
+                              <option value="sugerencia">Sugerencia</option>
+                         </select>
+                    </div>
+                        <div class="form-group">
+                            <label>¿Cómo nos encontraste?</label>
+    
+                            <label for="search-engine">Aleatoriamente</label>
+                            <input type="radio" id="search-engine" name="found" value="search_engine" required>
+                            
+    
+                            <label for="social-media">Redes sociales</label>
+                            <input type="radio" id="social-media" name="found" value="social_media">
+                            
+    
+                            <label for="recommendation">Recomendación</label>
+                            <input type="radio" id="recommendation" name="found" value="recommendation">
+                            
+                        </div>
+                        <div class="form-group">
+                            <label>¿Te gustaría recibir nuestro boletín?</label>
+                            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                            <label for="newsletter"></label>
+                        </div>
+                        <!-- campo de imagen -->
+                        <div class="form-group">
+                            <label for="image">Subir imagen de pelicula favorita:</label>
+                            <input type="file" id="image" name="image" accept="image/*" required>
+                        </div>
+
+                <div class="form-txt">
+                    <a href="#">Politica de Privacidad</a>
+                    <a href="#"> Terminos y Condiciones</a>
+                </div>
+                    <button type="submit">Enviar</button>
+
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/contact.html"> <!-- cuando lo subamos a netlify poner en value la url (link) -->
+                    <input type="hidden" name="_captcha" value="false">
+                </div>    
             </form>
         </section>
-    </main>    
+    </main>  
+    
+    <script>
+        // Función para validar el formulario
+        function validarFormulario() {
+            // Obtener los elementos del formulario
+            var nombre = document.getElementById('name');
+            var email = document.getElementById('email');
+            var mensaje = document.getElementById('message');
+            var motivo = document.getElementById('reason');
+            var encontraste = document.querySelector('input[name="found"]:checked'); // Corregido
+            var boletin = document.getElementById('newsletter');
+            var imagen = document.getElementById('image');
+    
+            // Verificar que los campos no estén vacíos
+            if (nombre.value === '' || email.value === '' || mensaje.value === '' || motivo.value === '' || !encontraste || boletin.checked === false || imagen.value === '') {
+                alert('Por favor, complete todos los campos obligatorios.');
+                return false; // Detener el envío del formulario
+            }
+    
+            // Si todos los campos están completos, se enviará el formulario
+            return true;
+        }
+    
+        // Agregar el evento 'submit' al formulario para llamar a la función de validación
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            // Validar el formulario
+            if (!validarFormulario()) {
+                event.preventDefault(); // Detener el envío del formulario si no está validado
+            }
+        });
+    </script>
+
     <footer>
         <p>&copy; 2024 Generador de Ideas para Noches de Cine en Casa</p>
     </footer>
