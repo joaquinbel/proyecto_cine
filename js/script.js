@@ -85,3 +85,4 @@ function obtenerActividad(ocasion) {
             return "Disfrutar de la película";
     }
 }
+
