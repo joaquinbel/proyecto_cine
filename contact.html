@@ -24,15 +24,15 @@
             <form id="contact-form" action="https://formsubmit.co/consultaspeliscodo@gmail.com" method="POST" target="_blank"> <!--Mail: consultaspeliscodo@gmail.com contraseña: consultas123 -->
                 <div class="form-group">
                     <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" required >
+                    <input type="text" id="name" name="name" required  placeholder="Ingrese su nombre aquí...">
                 </div>
                 <div class="form-group">
                     <label for="email">Correo electrónico:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required  placeholder="Ingrese su correo electrónico aquí...">
                 </div>
                 <div class="form-group">
                     <label for="message">Mensaje:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <textarea id="message" name="message" rows="5" required placeholder="Ingrese sus comentarios aquí..."></textarea>
                 </div>
                 <!-- <nuevo> -->
                 <div class="form-group">
@@ -97,7 +97,7 @@
             var imagen = document.getElementById('image');
     
             // Verificar que los campos no estén vacíos
-            if (nombre.value === '' || email.value === '' || mensaje.value === '' || motivo.value === '' || !encontraste || boletin.checked === false || imagen.value === '') {
+            if (nombre.value === '' || email.value === '' || mensaje.value === '' || motivo.value === '' || !encontraste /*|| boletin.checked === false*/ || imagen.value === '') {
                 alert('Por favor, complete todos los campos obligatorios.');
                 return false; // Detener el envío del formulario
             }

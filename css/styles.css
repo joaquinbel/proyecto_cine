@@ -231,7 +231,7 @@ button {
 
 button:hover {
     background-color: #555;
-    color: yellow;
+    color: #999999;
     
 }
 
@@ -246,7 +246,7 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #555;
-    color: yellow;
+    color: #999999;
 }
 
 
@@ -295,8 +295,8 @@ nav ul li a:hover {
     font-size: 2vw;
 }
 footer a:hover {
-    /* color: #999999; */
-    color: yellow;
+    color: #999999;
+    /* color: yellow; */
 }
 
 /* animación del footer */
