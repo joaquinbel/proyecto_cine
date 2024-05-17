@@ -63,7 +63,7 @@ footer {
     background-color: #333;
     color: #fff;
     /*padding: 10px 20px; */
-    position: none;
+    /* position: none; */
     bottom: 0;
     width: 100%;
     z-index: 1000; /* Asegura que el footer esté por encima de otros elementos */
@@ -176,7 +176,7 @@ label {
 
 .form-txt {
     margin-bottom: 30px;
-    display: center;
+    /* display: center; */
     justify-content: space-between;
     text-align: center;
 
@@ -231,6 +231,7 @@ button {
 
 button:hover {
     background-color: #555;
+    color: yellow;
     
 }
 
@@ -334,3 +335,4 @@ header h1:hover {
     60% { transform: translate(1rem, 1rem); -webkit-transform: translate(1rem, 1rem); -moz-transform: translate(1rem, 1rem); -ms-transform: translate(1rem, 1rem); -o-transform: translate(1rem, 1rem); }
     80% { transform: translate(0, 1rem); -webkit-transform: translate(0, 1rem); -moz-transform: translate(0, 1rem); -ms-transform: translate(0, 1rem); -o-transform: translate(0, 1rem); }
 }
+
