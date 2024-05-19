@@ -1,8 +1,3 @@
-// script.js
-
-// Definimos las opciones disponibles para cada categoría
-// script.js
-
 // Definimos las opciones disponibles para cada categoría
 const generos = {
     accion: ["El secreto de sus ojos", "Argentina 1985", "Carancho", "Nueve reinas", "Relatos salvajes", "El hijo de la novia"],
