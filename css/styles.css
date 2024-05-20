@@ -67,6 +67,9 @@ footer {
         width: 240px;
         height: 250px;        
     }
+    .redsocial i {
+        font-size: 5vw;
+    }
 }
 
 @media (min-width: 481px)
@@ -93,6 +96,9 @@ footer {
         width: 498px;
         height: 280px;        
     }
+    .redsocial i {
+        font-size: 4vw;
+    }
 }
 @media (min-width: 769px)
 {
@@ -118,6 +124,9 @@ footer {
         width: 600px;
         height: 450px;        
     }
+    .redsocial i {
+        font-size: 3vw;
+    }
 }
 @media (min-width: 1025px)
 {
@@ -142,6 +151,9 @@ footer {
     #mapa {
         width: 600px;
         height: 450px;        
+    }
+    .redsocial i {
+        font-size: 2vw;
     }
 }
 
@@ -279,33 +291,10 @@ nav ul li a:hover {
     margin: 0px 6px;
     font-size: 2vw;
 }
+
 footer a:hover {
     color: #999999;
 }
-
-/* animación del footer */
-footer p {
-    animation-duration: 15s;
-    animation-name: desplazar;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-}
-  
-@keyframes desplazar {
-    from {
-      margin-left: -65%;
-      width: 300%;
-    }
-  
-    to {
-      margin-left: -35%;
-      width: 100%;
-    }
-  }
-  footer p:hover {
-    color: orange;
-  }
 
 /* animación del header */
 header h1:hover {
@@ -320,3 +309,30 @@ header h1:hover {
     80% { transform: translate(0, 1rem); -webkit-transform: translate(0, 1rem); -moz-transform: translate(0, 1rem); -ms-transform: translate(0, 1rem); -o-transform: translate(0, 1rem); }
 }
 
+@media (min-width: 1025px) {
+    /* animación del footer */
+    footer p:hover {
+        animation-duration: 10s;
+        animation-name: desplazar;
+        animation-iteration-count: infinite;
+        animation-direction: alternate; 
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes desplazar {
+        from {
+        margin-left: -65%;
+        width: 300%;
+        }
+
+        to {
+        margin-left: -35%;
+        width: 100%;
+        }
+    }
+}
+
+
+footer p:hover {
+    color: orange;
+}
