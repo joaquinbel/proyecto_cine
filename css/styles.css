@@ -70,6 +70,11 @@ footer {
     .redsocial i {
         font-size: 5vw;
     }
+    .netflix-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+    }
 }
 
 @media (min-width: 481px)
@@ -99,6 +104,11 @@ footer {
     .redsocial i {
         font-size: 4vw;
     }
+    .netflix-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
 }
 @media (min-width: 769px)
 {
@@ -127,6 +137,11 @@ footer {
     .redsocial i {
         font-size: 3vw;
     }
+    .netflix-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+    }
 }
 @media (min-width: 1025px)
 {
@@ -154,6 +169,11 @@ footer {
     }
     .redsocial i {
         font-size: 2vw;
+    }
+    .netflix-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
     }
 }
 
@@ -254,11 +274,11 @@ nav ul li a:hover {
 
 
 /* Media queries para ajustar el tamaño de la imagen en diferentes tamaños de pantalla */
-.netflix-grid {
+/* .netflix-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-}
+} */
 
 .item {
     width: 100%;
