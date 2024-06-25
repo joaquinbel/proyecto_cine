@@ -182,6 +182,10 @@ footer {
     }
 }
 
+#foto {
+    object-fit: cover;
+}
+
 /* Estilos específicos para secciones */
 .welcome-section,
 .generator-section,

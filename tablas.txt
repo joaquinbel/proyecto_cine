@@ -1,0 +1,125 @@
+CATALOGO
+id 
+titulo
+descripcion 
+
+
+PELICULA
+id
+titulo
+descripcion
+duracion
+
+GENERO
+id
+descripcion
+
+
+ESTADO_ANIMO
+id
+descripcion (Feliz, Nostálgico, Emocionado, Relajado)
+
+OCASION
+id
+descripcion (Noche Romántica, Noche de Lluvia, Noche de Terror)
+
+----------------------
+
+-- Crear la base de datos
+CREATE DATABASE dbpeliculas;
+--USE dbpeliculas;
+
+-- Tabla de catálogos
+CREATE TABLE catalogo (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    descripcion TEXT
+);
+
+-- Tabla de géneros
+CREATE TABLE genero (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    descripcion VARCHAR(100) NOT NULL
+);
+
+-- Tabla de películas
+CREATE TABLE pelicula (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    descripcion TEXT,
+    duracion INT, -- en minutos
+    genero_id INT,
+    FOREIGN KEY (genero_id) REFERENCES genero(id)
+);
+
+-- Tabla de relación entre películas y catálogos
+CREATE TABLE dbpeliculas.catalogo_pelicula (
+    catalogo_id INT,
+    pelicula_id INT,
+    PRIMARY KEY (catalogo_id, pelicula_id),
+    FOREIGN KEY (catalogo_id) REFERENCES dbpeliculas.catalogo(id) ON DELETE CASCADE,
+    FOREIGN KEY (pelicula_id) REFERENCES dbpeliculas.pelicula(id) ON DELETE CASCADE
+);
+
+-- Tabla de estados de ánimo
+CREATE TABLE animo (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    descripcion VARCHAR(100) NOT NULL
+);
+
+-- Tabla de ocasiones
+CREATE TABLE ocasion (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    descripcion VARCHAR(100) NOT NULL
+);
+
+
+
+---------------------------------------------------------------------------------------------------
+
+-- Crear la base de datos
+CREATE DATABASE dbpeliculas;
+--USE dbpeliculas;
+
+-- Tabla de películas
+CREATE TABLE pelicula (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    descripcion TEXT,
+    duracion INT, -- en minutos
+    anio INT,
+    director VARCHAR(255),
+    fecha_lanzamiento DATE
+);
+
+-- Tabla de géneros
+CREATE TABLE generos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
+);
+
+-- Tabla de relación entre películas y géneros
+CREATE TABLE peliculas_generos (
+    pelicula_id INT,
+    genero_id INT,
+    PRIMARY KEY (pelicula_id, genero_id),
+    FOREIGN KEY (pelicula_id) REFERENCES peliculas(id) ON DELETE CASCADE,
+    FOREIGN KEY (genero_id) REFERENCES generos(id) ON DELETE CASCADE
+);
+
+-- Tabla de catálogos
+CREATE TABLE catalogos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    descripcion TEXT
+);
+
+-- Tabla de relación entre películas y catálogos
+CREATE TABLE peliculas_catalogos (
+    pelicula_id INT,
+    catalogo_id INT,
+    PRIMARY KEY (pelicula_id, catalogo_id),
+    FOREIGN KEY (pelicula_id) REFERENCES peliculas(id) ON DELETE CASCADE,
+    FOREIGN KEY (catalogo_id) REFERENCES catalogos(id) ON DELETE CASCADE
+);
+
